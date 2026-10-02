@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cel / Teddy ✨</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #3b2836;
+      background-image: radial-gradient(#6b4055 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      font-family: 'Nunito', sans-serif;
+      color: #5c3043;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    /* Main Card Container */
+    .container {
+      display: flex;
+      flex-direction: row;
+      background: #fdf6e9;
+      width: 100%;
+      max-width: 860px;
+      border-radius: 28px;
+      border: 4px solid #cc435f;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    /* Left Column: Profile & Toradora Palette */
+    .left-side {
+      width: 38%;
+      background: #f7e7ce;
+      padding: 35px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-right: 3px dashed #d99b79;
+    }
+
+    .photo-frame {
+      width: 150px;
+      height: 150px;
+      border-radius: 24px;
+      border: 4px solid #cc435f;
+      box-shadow: 0 8px 18px rgba(166, 30, 58, 0.25);
+      overflow: hidden;
+      margin-bottom: 18px;
+      background-color: #fce8cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.8rem;
+      color: #a61e3a;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.88rem;
+      color: #632635;
+      background: #f8cb7f;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 22px;
+    }
+
+    /* Social Buttons */
+    .social-links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px;
+      background: #ffffff;
+      border: 2px solid #cc435f;
+      border-radius: 16px;
+      color: #a61e3a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background: #a61e3a;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Right Column: Bio & Games */
+    .right-side {
+      width: 62%;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: #fdf6e9;
+    }
+
+    .section-box {
+      background: #ffffff;
+      border: 2px solid #f8cb7f;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .section-title {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.15rem;
+      color: #a61e3a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #5c3043;
+    }
+
+    /* Games Grid (2 Columns) */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+    }
+
+    .game-card {
+      background: #fcedf0;
+      border: 1px solid #f5b2bd;
+      padding: 9px 11px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #8c1931;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Tags / Vibe */
+    .interests-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #f8cb7f;
+      color: #5c3043;
+      padding: 5px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* Mobile Responsive adjustments */
+    @media (max-width: 680px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-side, .right-side {
+        width: 100%;
+      }
+      .left-side {
+        border-right: none;
+        border-bottom: 3px dashed #d99b79;
+      }
+      .games-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDE: Profile & Socials -->
+    <div class="left-side">
+      <div class="photo-frame">
+        <!-- PUT YOUR PINTEREST TAIGA PFP URL IN THE SRC BELOW -->
+        <img src="https://i.pinimg.com/1200x/4f/f6/6d/4ff66d558d5bd0283d0d3f5f1a4cfcad.jpg" alt="Cel Profile Picture">
+      </div>
+
+      <h1>Cel / Teddy</h1>
+      <span class="subtitle">🐯 welcome to my page 💫</span>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/xxcelx/?next=%2F3x46888%2F" target="_blank" class="social-btn">Instagram</a>
+        <a href="https://www.tiktok.com/@t3ddycel" target="_blank" class="social-btn">TikTok</a>
+        <a href="https://discord.com/channels/1498444995458240584" target="_blank" class="social-btn">Discord user xxcelx</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: About Me & Games -->
+    <div class="right-side">
+
+      <div class="section-box">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+          Hi you can call me cel or. I don't really trust people much, but I'm really kind-hearted and a good listener. I like to make friends for the long term and I love playing games with friends. Also I love animals and sweet/cute stuff. I might be a bit sensitive, but that's fine. Sometimes I might not text back either that's just because I'm going trough something at the moment so just know I wouldnt ghost anyone. I also like to write stuff about my life to analyse it.
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2 class="section-title">🎮Favorite Games</h2>
+        <div class="games-grid">
+          <div class="game-card">🌾Stardew Valley</div>
+          <div class="game-card">Roblox</div>
+          <div class="game-card">Valorant</div>
+          <div class="game-card">Brawl Stars</div>
+          <div class="game-card">Geometry Dash</div>
+          <div class="game-card">7DS Origin</div>
+          <div class="game-card">Genshin Impact</div>
+          <div class="game-card">MHA Ultra Rumble</div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h2 class="section-title">My Vibe</h2>
+        <div class="interests-list">
+          <span class="tag">Music</span>
+          <span class="tag">Gaming with Friends</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
